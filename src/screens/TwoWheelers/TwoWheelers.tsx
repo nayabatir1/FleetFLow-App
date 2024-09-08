@@ -88,7 +88,6 @@ function TwoWheelers() {
   const submit = form.handleSubmit(async data => {
     createOrder.mutateAsync(data, {
       onSuccess: response => {
-        console.log(response);
         startTransition(() => {
           setResp(response.data);
           toggleResultModal();
